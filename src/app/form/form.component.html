@@ -1,0 +1,162 @@
+
+
+<br>
+
+<h2>Form Validation</h2>
+
+<!--Validation-->
+<form name="form" #frm="ngForm" (ngSubmit)="frm.valid && afterSubmit()">
+
+    <div class="form-group">
+
+<!-- Name -->
+        <label class="form-label" for="formControlLg" >Name</label>
+        <br>
+        <input type="text" name="Fv" required id="formControlLg" class="form-control form-control-lg"  [(ngModel)]="user.Fv" #Fv="ngModel" required  minlength="5" pattern='^[a-zA-Z_]+$' />
+        
+      </div>
+
+      <div *ngIf ='Fv.invalid && (Fv.touched || Fv.dirty)'>
+
+          <div *ngIf="Fv.errors?.['required']">
+
+           Name is Required in the feild!!
+          </div>
+
+          <div *ngIf="Fv.errors?.['minlength']">
+
+            Name should be atleast 5 char 
+          </div>
+          
+          <div *ngIf="Fv.errors?.['pattern']">
+
+            Name should not be having special Symbols 
+          </div>
+          </div>
+<!-- Email-->
+<div class="form-group">
+
+    <label class="form-label" for="formControlLg" >Email</label>
+    <br>
+
+    <input type="text" name="email" required id="formControlLg" class="form-control form-control-lg"  [(ngModel)]="user.email" #email="ngModel" required  minlength="5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+    
+  </div>
+
+  <div *ngIf ='email.invalid && (email.touched || Fv.dirty)'>
+
+      <div *ngIf="email.errors?.['required']">
+
+       Email is Required in the feild!!
+      </div>
+
+      <div *ngIf="email.errors?.['minlength']">
+
+        Email should be atleast 5 char 
+      </div>
+      
+      <div *ngIf="email.errors?.['pattern']">
+
+        Email have incorrect symbols
+      </div>
+
+</div>
+
+
+<!-- Phone Number-->
+<div class="form-group">
+
+    <label class="form-label" for="formControlLg" >Phone Number</label>
+    <br>
+
+    <input type="text" name="number" required id="formControlLg" class="form-control form-control-lg"  [(ngModel)]="user.number" #number="ngModel" required  minlength="5" pattern="^[0-9]+$" />
+    
+  </div>
+
+  <div *ngIf ='number.invalid && (number.touched || number.dirty)'>
+
+      <div *ngIf="number.errors?.['required']">
+
+       Phone Number is Required in the feild!!
+      </div>
+
+      <div *ngIf="number.errors?.['minlength']">
+
+        Phone Number should be atleast 5 char 
+      </div>
+      
+      <div *ngIf="number.errors?.['pattern']">
+
+        Phone Number have incorrect symbols
+      </div>
+
+</div>
+
+
+<!-- city-->
+<div class="form-group">
+
+    <label class="form-label" for="formControlLg" >City</label>
+    <br>
+
+    <input type="text" name="city" required id="formControlLg" class="form-control form-control-lg"  [(ngModel)]="user.city" #city="ngModel" required  minlength="5" pattern="^[a-zA-Z]+$" />
+    
+  </div>
+
+  <div *ngIf ='city.invalid && (city.touched || city.dirty)'>
+
+      <div *ngIf="city.errors?.['required']">
+
+        city is Required in the feild!!
+      </div>
+
+      <div *ngIf="city.errors?.['minlength']">
+
+        city should be atleast 5 char 
+      </div>
+      
+      <div *ngIf="city.errors?.['pattern']">
+
+        city have incorrect symbols
+      </div>
+
+</div>
+
+<!-- Pin Code -->
+<div class="form-group">
+
+    <label class="form-label" for="formControlLg" >PinCode</label>
+    <br>
+
+    <input type="text" name="pin" required id="formControlLg" class="form-control form-control-lg"  [(ngModel)]="user.pin" #pin="ngModel" required  minlength="5" pattern="^[0-9]+$" />
+    
+  </div>
+
+  <div *ngIf ='pin.invalid && (pin.touched || pin.dirty)'>
+
+      <div *ngIf="pin.errors?.['required']">
+
+       PinCode is Required in the feild!!
+      </div>
+
+      <div *ngIf="pin.errors?.['minlength']">
+
+        PinCode should be atleast 5 char 
+      </div>
+      
+      <div *ngIf="pin.errors?.['pattern']">
+
+        PinCode have incorrect symbols
+      </div>
+
+      
+    
+</div>
+<div>
+    <button class="btn btn-success" style="margin-left: 100px;" type="Submit" [disabled]="frm.invalid">Submit</button>
+
+</div>
+  
+
+</form>
+

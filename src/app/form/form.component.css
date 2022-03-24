@@ -1,0 +1,16 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.form-group{
+    margin: 30px 100px;
+}
+h2
+{
+   
+    text-align: center;
+    color: grey;
+}
+.butto{
+    display: flex;
+    
+    
+    
+}

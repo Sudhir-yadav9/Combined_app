@@ -1,0 +1,53 @@
+
+<body>
+<div class="mx-auto" style="width: 400px;height: 400px;margin-top: 20px;">
+      
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <H4 class="card-title"> Emi Calculator</H4>
+            <h6 class="card-title">Amount(Rs)</h6>
+        <p class="card-text">
+            
+            <input type="text"  [(ngModel)]="amt" placeholder="Enter the amount in RS"> </p>
+  
+        <h6 class="card-title">Intrest Rate(%)</h6>
+        <p class="card-text" >
+            
+            <input type="text"  [(ngModel)]="roi" placeholder="Enter the amount in RS"> </p>
+   
+        <h6 class="card-title">Time Perioud(Yrs)</h6>
+        <p class="card-text">
+            
+            <input type="text" [(ngModel)]="tenure" placeholder="Enter the amount in RS"> </p>
+    
+        
+    <div class="btn-group" role="group" aria-label="Basic example">
+        
+
+        <button  class="btn btn-secondary" id="Total" (click)="validateInput(); calcMonthly();calcTotal(); "target="_blank">Total</button>
+        <button   class="btn btn-secondary" id="Yearly" (click)="validateInput();calcMonthly();creattablyearly();">Yearly</button>
+        <button  class="btn btn-secondary" id="Monthly"  (click)="validateInput();calcMonthly();creattablmonthly();">Monthly</button>
+       
+      </div>
+
+        </div>
+      </div>
+      </div>
+
+
+
+<!--Tables Data-->
+
+
+    <table class="table"id='tablle' [(ngModel)]="tablle">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Year</th>
+            <th scope="col">Amount To Pay</th>
+            <th scope="col">Remaining Amount</th>
+          </tr>
+        </thead>
+       
+      </table>
+    </body>

@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lazy-routing-app';
+ 
+  name='';
+/*
+  user: any={};
+
+
+  afterSubmit()
+  {
+    alert(JSON.stringify(this.user));
+  }
+*/
+
 }

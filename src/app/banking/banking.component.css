@@ -1,0 +1,26 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.title-card
+{
+    margin-left: 90px;font-size: 25px;
+}
+.card-text
+{
+    margin-left: 110px;
+}
+.Hold
+{
+    margin-left: 104px; padding-bottom: 20px;
+}
+
+.btn-group
+{
+    margin-left: 10px;
+}
+
+body {
+   align-self: center;
+   
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+ }
